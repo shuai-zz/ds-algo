@@ -1,12 +1,14 @@
 package algo;
 
-import org.example.algo.recrusion.Fibonacci;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.example.algo.recrusion.Factorial.factorial;
-import static org.example.algo.recrusion.ReversePrintString.*;
+import static org.example.algo.recrusion.Fibonacci.fibonacci;
+import static org.example.algo.recrusion.Fibonacci.fibonacciV2;
+import static org.example.algo.recrusion.ReversePrintString.reversePrintStringIterative;
+import static org.example.algo.recrusion.ReversePrintString.reversePrintStringRecursive;
 
 public class Recursion {
 
@@ -28,9 +30,12 @@ public class Recursion {
     @Test
     @DisplayName("斐波那契数列")
     public void fibonacciTest(){
-        int num = Fibonacci.fibonacci(8);
-        System.out.println(num );
+        Assertions.assertEquals(21,fibonacci(8));
 
+
+        Assertions.assertEquals(1,fibonacciV2(2));
+        Assertions.assertEquals(2,fibonacciV2(3));
+        Assertions.assertEquals(5,fibonacciV2(5));
     }
 
 }
