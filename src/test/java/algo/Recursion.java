@@ -1,5 +1,6 @@
 package algo;
 
+import org.example.algo.recrusion.HanoiTower;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -38,4 +39,9 @@ public class Recursion {
         Assertions.assertEquals(5,fibonacciV2(5));
     }
 
+    @Test
+    @DisplayName("汉诺塔")
+    public void HanoiTest(){
+        HanoiTower.hanoi(3);
+    }
 }
