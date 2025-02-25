@@ -1,7 +1,6 @@
 package org.example.algo.recrusion;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class HanoiTower {
     static LinkedList<Integer> a = new LinkedList<>();
@@ -40,11 +39,5 @@ public class HanoiTower {
         System.out.println(b);
         System.out.println(c);
         System.out.println("----------------------");
-    }
-    public static void hanota(List<Integer> A, List<Integer> B, List<Integer> C) {
-        System.out.println(A);
-    }
-    public static void main(String[] args) {
-
     }
 }
