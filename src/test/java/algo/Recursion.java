@@ -1,15 +1,16 @@
 package algo;
 
-import org.example.algo.recrusion.HanoiTower;
+import org.example.algo.recursion.HanoiTower;
+import org.example.algo.recursion.PascalTriangle;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.example.algo.recrusion.Factorial.factorial;
-import static org.example.algo.recrusion.Fibonacci.fibonacci;
-import static org.example.algo.recrusion.Fibonacci.fibonacciV2;
-import static org.example.algo.recrusion.ReversePrintString.reversePrintStringIterative;
-import static org.example.algo.recrusion.ReversePrintString.reversePrintStringRecursive;
+import static org.example.algo.recursion.Factorial.factorial;
+import static org.example.algo.recursion.Fibonacci.fibonacci;
+import static org.example.algo.recursion.Fibonacci.fibonacciV2;
+import static org.example.algo.recursion.ReversePrintString.reversePrintStringIterative;
+import static org.example.algo.recursion.ReversePrintString.reversePrintStringRecursive;
 
 public class Recursion {
 
@@ -44,4 +45,11 @@ public class Recursion {
     public void HanoiTest(){
         HanoiTower.hanoi(3);
     }
+
+    @Test
+    @DisplayName("杨辉三角")
+    public void  PascalTriangleTest(){
+        PascalTriangle.print(5);
+    }
+
 }

@@ -1,4 +1,4 @@
-package org.example.algo.recrusion;
+package org.example.algo.recursion;
 
 public class ReversePrintString {
     /**
