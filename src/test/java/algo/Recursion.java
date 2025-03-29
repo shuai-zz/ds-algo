@@ -50,6 +50,8 @@ public class Recursion {
     @DisplayName("杨辉三角")
     public void  PascalTriangleTest(){
         PascalTriangle.print(5);
+        PascalTriangle.printV2(5);
+        PascalTriangle.printV3(5);
     }
 
 }
