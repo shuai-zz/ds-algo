@@ -25,7 +25,7 @@ public class Recursion {
     public void reversePrintStringTest(){
         String str = "abc";
         reversePrintStringRecursive(0,str);
-        System.out.println("");
+        System.out.println();
         reversePrintStringIterative(str);
     }
 
