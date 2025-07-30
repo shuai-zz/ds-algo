@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-public class Sort {
+public class SortTest {
     int[] array={74,9,30,11,43,22,66,78,2,49,80};
     int[] newArray= Arrays.stream(array).sorted().toArray();
 
