@@ -25,7 +25,10 @@ public class Sort {
     @Test
     @DisplayName("插入排序")
     void insertionSortTest() {
-        int[] arraySorted= InsertionSort.insertionSortRecrutive(array);
-        System.out.println(Arrays.toString(arraySorted));
+        int[] arraySorted= InsertionSort.insertionSortRecursive(array);
+        Assertions.assertArrayEquals(newArray, arraySorted);
+
+        int[] arraySorted2 = InsertionSort.insertionSortIterative(array);
+        Assertions.assertArrayEquals(newArray, arraySorted2);
     }
 }
