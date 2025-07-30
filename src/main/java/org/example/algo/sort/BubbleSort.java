@@ -8,27 +8,28 @@ public class BubbleSort {
         arr[j] = temp;
     }
     public static int[] bubbleSortIterative(int[] arr) {
+        boolean swapped;
         for (int i = 0; i < arr.length - 1; i++) {
-            boolean swapped = false;
+            // 当一遍排序后无元素改变=>已有序
+            swapped = false;
             for (int j = 0; j < arr.length - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
                     swap(arr, j, j + 1);
                     swapped = true;
                 }
             }
-            if (!swapped) {break;}
+            if(!swapped) break;
         }
         return arr;
     }
 
     public static int[] bubbleSortRecursive(int[] arr) {
-        bubble(arr,arr.length-1);
+        bubble(arr, arr.length - 1);
         return arr;
     }
-    private static void bubble(int[] arr,int j) {
-        if(j==0){
-            return;
-        }
+
+    private static void bubble(int[] arr, int j) {
+        if(j==0) return;
         int x=0;
         for (int i = 0; i < j; i++) {
             if (arr[i] > arr[i + 1]) {
@@ -36,6 +37,7 @@ public class BubbleSort {
                 x=i;
             }
         }
-        bubble(arr,x);
+        bubble(arr, x);
     }
+
 }
