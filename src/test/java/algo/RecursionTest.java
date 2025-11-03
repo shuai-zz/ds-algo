@@ -12,7 +12,7 @@ import static org.example.algo.recursion.Fibonacci.fibonacciV2;
 import static org.example.algo.recursion.ReversePrintString.reversePrintStringIterative;
 import static org.example.algo.recursion.ReversePrintString.reversePrintStringRecursive;
 
-public class Recursion {
+public class RecursionTest {
 
     @Test
     @DisplayName("求阶乘")
