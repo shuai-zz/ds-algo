@@ -2,7 +2,7 @@ package org.example.algo.Leetcode;
 
 public class ListNode {
     int val;
-    ListNode next;
+    public ListNode next;
     ListNode(){}
     public ListNode(int val) {this.val = val;}
     public ListNode(int val, ListNode next) {this.val = val;this.next = next;}
@@ -40,5 +40,38 @@ public class ListNode {
             curr = curr.next; // 移动到下一个节点
         }
         return sb.toString();
+    }
+
+
+    /**
+     * 获取
+     * @return val
+     */
+    public int getVal() {
+        return val;
+    }
+
+    /**
+     * 设置
+     * @param val
+     */
+    public void setVal(int val) {
+        this.val = val;
+    }
+
+    /**
+     * 获取
+     * @return next
+     */
+    public ListNode getNext() {
+        return next;
+    }
+
+    /**
+     * 设置
+     * @param next
+     */
+    public void setNext(ListNode next) {
+        this.next = next;
     }
 }
