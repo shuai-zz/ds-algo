@@ -13,7 +13,7 @@ public class ArrayQueue<E> implements Queue<E>, Iterable<E> {
 
     @SuppressWarnings("all")
     public ArrayQueue(int capacity) {
-        array = (E[]) new Object[capacity];
+        array = (E[]) new Object[capacity+1];
     }
 
     @Override
