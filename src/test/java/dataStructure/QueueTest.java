@@ -11,12 +11,13 @@ public class QueueTest {
     @Test
     @DisplayName("offer/isEmpty/peek/poll方法测试")
     public void offerTest(){
-        LinkedListQueue<Integer> queue = new LinkedListQueue<>();
+        LinkedListQueue<Integer> queue = new LinkedListQueue<>(3);
         queue.offer(1);
         queue.offer(2);
         queue.offer(3);
         //offer
         Assertions.assertIterableEquals(List.of(1,2,3),queue);
+        Assertions.assertFalse(queue.offer(4));
         //isEmpty
         Assertions.assertFalse(queue.isEmpty());
         //peek

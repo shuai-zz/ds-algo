@@ -11,5 +11,6 @@ public interface Queue<E> {
     E poll();
     E peek();
     boolean isEmpty();
+    boolean isFull();
 
 }

@@ -18,10 +18,17 @@ public class LinkedListQueue<E>
         }
     }
 
-    Node<E> head=new Node<>(null,null);
-    Node<E> tail=head;
+    private final Node<E> head=new Node<>(null,null);
+    private Node<E> tail=head;
+    private int size;
+    private int capacity=Integer.MAX_VALUE;
+
 
     public LinkedListQueue() {
+        tail.next=head;
+    }
+    public LinkedListQueue(int capacity) {
+        this.capacity = capacity;
         tail.next=head;
     }
 
@@ -47,9 +54,11 @@ public class LinkedListQueue<E>
 
     @Override
     public boolean offer(E value) {
+        if(isFull()) return false;
         Node<E> added=new Node<>(value,head);
         tail.next=added;
         tail=added;
+        size++;
         return true;
     }
 
@@ -59,6 +68,7 @@ public class LinkedListQueue<E>
         Node<E> node=head.next;
         head.next=head.next.next;
         if(node==tail) tail=head;
+        size--;
         return node.value;
     }
 
@@ -73,4 +83,9 @@ public class LinkedListQueue<E>
         return head==tail;
     }
 
+    @Override
+    public boolean isFull() {
+
+        return size==capacity;
+    }
 }
